@@ -90,7 +90,46 @@ button:hover {
   transition: 0.3s ease;
 }
 
-/*   */
+/* hamburger menu  mobile navbar*/
+.navbar-light .navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+#bar {
+  font-size: 1.5rem;
+  padding: 7px;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s ease;
+}
+
+#bar:hover,
+#bar.active {
+  color: #fff;
+}
+
+@media only screen and (max-width: 991px) {
+  body > nav > div > button:hover,
+  body > nav > div > button:focus {
+    background-color: #fb774b;
+  }
+  body > nav > div > button:hover #bar,
+  body > nav > div > button:focus #bar {
+    color: #fff;
+  }
+
+  #navbarSupportedContent > ul {
+    margin: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  #navbarSupportedContent > ul > li:nth-child(n) > a {
+    padding: 10px 0;
+  }
+}
 
 /* HOME */
 #home span {
@@ -98,13 +137,79 @@ button:hover {
 }
 
 #home {
-  background-image: url("../img/slider/slider0.jpg");
+  background-image: url("../img/back.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-position: top center;
+  background-position: top 60px center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+/* Section NEW */
+#new .one img {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#new .one .details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+#new .one:hover .details {
+  cursor: pointer;
+  background-color: rgba(245, 178, 178, 0.7);
+}
+
+#new .one .details button {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2a2a2a;
+  background: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid #2a2a2a;
+  padding: 2.5px;
+  transform: translateY(70px);
+  transition: 0.3s ease;
+}
+
+#new .one .details button:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#new .one:nth-child(1) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+#new .one:nth-child(2) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#new .one:nth-child(3) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
 }
